@@ -1,23 +1,4 @@
-body {
-    margin: 0 auto;
-}
-
 header {
-    width: 100%;
-    text-align: left;
-    margin: 0;
+    text-align: center;
+    background: red;
 }
-
-header * {
-    border: 1px dashed red;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav * {
-    display: inline-block;
-}
-
