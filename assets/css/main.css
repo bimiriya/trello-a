@@ -1,4 +1,204 @@
+body {
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+    background: #167dd8;
+}
+
 header {
+    width: 100%;
+}
+
+header, header a {
+    color: white;
+    text-decoration: none;
+}
+
+header * {
+   /* border: 1px dashed yellow;*/
+}
+/*navs que corresponden a todo el header*/
+nav * {
+    display: inline-block;
+}
+
+nav {
+    padding: 5px;
+}
+
+/*nav superior*/
+#upper-nav {
+    background: rgba(0,0,0,.15);
+    text-align: left;
+}
+
+/*botones del menu*/
+.menu-btn {
+    padding: 4px 11px;
+    background: rgb(96, 156, 207);
+    font-size: 17px;
+    border-radius: 4px;
+}
+
+/*primer botón izquierda tableros*/
+#menu-left {
+    float: left;
+}
+
+#tablero-menu {
+    font-weight: 600;
+    margin-right: 4px;
+    margin-left: 5px;
+}
+
+#tablero-menu .fa {
+    margin-right: 4px;
+    font-size: 20px;
+}
+
+#tablero-menu span {
+    font-size: 15px;
+    vertical-align: top;
+}
+
+/*search bar*/
+#menu-left form {
+    padding: 4px 6px;
+}
+
+#menu-left form, #menu-left input {
+    background: rgb(96, 156, 207);
+}
+
+
+#menu-left input {
+    border: none;
+    color: white;
+    width: 130px;
+    margin-right: 4px;
+}
+
+#menu-left input:focus {
+    outline: none;
+}
+
+#menu-left form .fa {
+    transform: scaleX(-1);
+}
+
+/*middle div with logo*/
+#logo {
     text-align: center;
-    background: red;
+    margin-left: 4%;
+    padding-bottom: 3px;
+}
+#logo a {
+    width: 80px;
+    height: 30px;
+    background-image: url(../img/header-logo.png);
+    opacity: 0.5;
+}
+
+#logo a:hover {
+    opacity: 0.7;
+}
+
+/*los 3 divs dentro del primer nav*/
+#upper-nav div {
+    width: 30%;
+    vertical-align: middle;
+}
+
+/*menu right*/
+#menu-right {
+    text-align: right;
+    float: right;
+}
+
+#menu-right a {
+    text-align: center;
+    width: 30px;
+    padding: 3px 0;
+    display: inline-block;
+    background: rgb(96, 156, 207);
+    font-size: 17px;
+    border-radius: 4px;
+    margin: 0 2px;
+}
+
+#menu-right a:hover, .menu-btn:hover {
+    background: #4786bd;
+}
+
+#menu-right #info {
+    padding: 2px 0;
+    font-size: 10px;
+    width: 15px;
+    border: 2px solid white;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+
+#menu-right #user-profile {
+    padding: 3px 0;
+    background-image: url(../img/profile-pic.jpg);
+    height: 25px;
+    background-size: contain;
+    vertical-align: bottom;
+    border-radius: 50%;
+    margin: 0 3px;
+}
+
+/*bottom nav*/
+#bottom-menu {
+    margin-top: 3px;
+    margin-right: 10px;
+}
+#bottom-menu * {
+    line-height: 2;
+}
+
+#bottom-menu ul {
+    margin: 0;
+    padding: 0;
+}
+
+#bottom-menu li a, #bottom-menu li a:nth-child(2) {
+    padding: 0 10px;
+}
+
+#bottom-menu li:first-child {
+    font-weight: 600;
+}
+
+#bottom-menu .fa {
+    font-size: 15px;
+}
+
+#bottom-menu .fa-lock {
+    margin-right: 3px;
+}
+
+#bottom-menu li a:hover, #bottom-menu li a:nth-child(2):hover {
+    background: rgba(0,0,0,.15);
+    border-radius: 3px;
+}
+
+#mostrar-menu {
+    float: right;
+    font-size: 15px;
+    padding: 3px 10px;
+}
+
+#mostrar-menu a {
+    text-decoration: underline;
+}
+
+#mostrar-menu:hover {
+    background: rgba(0,0,0,.15);
+    border-radius: 3px;
+}
+
+#mostrar-menu .fa {
+    font-size: 10px;
+    margin-right: 3px;
 }
