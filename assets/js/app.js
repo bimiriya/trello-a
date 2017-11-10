@@ -47,22 +47,46 @@
         guardarBtn.appendChild(anadirTarjeta);
         newContainer.appendChild(icon);
 
-        //función para cerrar con .fa-times
-        icon.addEventListener("click",function() {
-            label.style.display = "inline-block";
-            container.removeChild(newContainer);
-        })
-
-        guardarBtn.addEventListener("click", function() {
-            var list = document.getElementById("input").value;
-            document.getElementById("input").value = "";
-        })
-
     })
 
+    //función para cerrar con .fa-times
+    icon.addEventListener("click",function() {
+        document.getElementById("input").value = "";
+        label.style.display = "inline-block";
+        container.removeChild(newContainer);
+    })
+
+    guardarBtn.addEventListener("click", function() {
+        var list = document.getElementById("input").value;
+        
+        newContainer.style.cursor = "pointer";
+        input.style.display = "none";
+        guardarBtn.style.display = "none";
+        icon.style.display = "none";
+
+        //input ya ingresado
+        var card = document.createElement("label");
+        var cardName = document.createTextNode(list);
+        //menu a la derecha
+        var cardMenu = document.createElement("i");
+        //link para tarjeta
+        var add = document.createElement("a");
+        var textAdd = document.createTextNode("Añadir tarjeta...");
+
+        card.setAttribute("id","card-name");
+        cardMenu.classList.add("fa","fa-ellipsis-h");
+        add.setAttribute("href","#");
+        add.setAttribute("id","add-card");
+        
+        card.appendChild(cardName);
+        newContainer.appendChild(card);
+        newContainer.appendChild(cardMenu);
+        newContainer.appendChild(add);
+        add.appendChild(textAdd);
+    })
 
     //1 div
-    //2 labes
+    //2 labels
     // 1 textarea //div que encierre textarea con elementos de abajo para luego darles display none
     //botón añadir
     //llamar icono

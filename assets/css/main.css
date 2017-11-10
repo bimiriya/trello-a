@@ -237,7 +237,7 @@ nav {
 #input {
     display: block;
     padding: 10px;
-    margin: 8px 6px;
+    margin: 8px 0 0 6px;
     width: 87%;
     background: #cccccc;
     border: none;
@@ -275,4 +275,40 @@ input::-webkit-input-placeholder {
 
 .fa-times:hover {
     color: #888888;
+}
+
+#card-name {
+    font-weight: 600;
+    display: inline-block;
+    padding: 10px;
+    margin: 8px 6px;
+    cursor: pointer;
+}
+
+#add-card {
+    display: block;
+}
+
+.fa-ellipsis-h {
+    float: right;
+    margin-top: 15px;
+    margin-right: 8px;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.fa-ellipsis-h:hover {
+    background: #cacaca;
+}
+
+#add-card {
+    padding: 5px 0 8px 8px;
+}
+
+#add-card:hover {
+    background: #cacaca;
+}
+
+a {
+    color: black;
 }
