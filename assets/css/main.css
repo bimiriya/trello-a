@@ -202,3 +202,77 @@ nav {
     font-size: 10px;
     margin-right: 3px;
 }
+
+/******js elements********/
+/*añadir una lista*/
+#container {
+    display: inline-block;
+}
+
+#label {
+    width: 250px;
+    display: inline-block;
+    margin: 20px 30px;
+    padding: 10px;
+    color: white;
+    background: rgba(0,0,0,.15);
+    border-radius: 4px;
+    cursor: text;
+    font-size: 18px;
+}
+
+#label:hover {
+    background: rgba(0, 0, 0, 0.24);
+}
+
+/*second phase*/
+#new-container {
+    width: 250px;
+    margin: 20px 30px;
+    display: inline-block;
+    background: #e1e3e6;
+    border-radius: 4px;
+}
+
+#input {
+    display: block;
+    padding: 10px;
+    margin: 8px 6px;
+    width: 87%;
+    background: #cccccc;
+    border: none;
+    outline: 2px solid #c1c1c2;
+}
+
+input::-webkit-input-placeholder {
+    font-size: 18px;
+}
+
+#guardar-btn {
+    margin: 4px;
+    padding: 8px 13px;
+    background: #24ba3f;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+#guardar-btn:hover {
+    background: #23a835;
+}
+
+.fa-times {
+    font-size: 30px;
+    vertical-align: middle;
+    color: #a8a8a8;
+    margin-left: 5px;
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+
+.fa-times:hover {
+    color: #888888;
+}
