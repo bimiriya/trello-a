@@ -56,13 +56,12 @@
         container.removeChild(newContainer);
     })
 
+    //función para guardar el input e integrar link añadir tarjeta
     guardarBtn.addEventListener("click", function() {
         var list = document.getElementById("input").value;
-        
+        document.getElementById("input").value = "";
+        var cardContainer = document.createElement("div");
         newContainer.style.cursor = "pointer";
-        input.style.display = "none";
-        guardarBtn.style.display = "none";
-        icon.style.display = "none";
 
         //input ya ingresado
         var card = document.createElement("label");
@@ -73,23 +72,56 @@
         var add = document.createElement("a");
         var textAdd = document.createTextNode("Añadir tarjeta...");
 
+        cardContainer.setAttribute("id","card-container");
         card.setAttribute("id","card-name");
         cardMenu.classList.add("fa","fa-ellipsis-h");
         add.setAttribute("href","#");
         add.setAttribute("id","add-card");
         
+        document.body.appendChild(cardContainer);
         card.appendChild(cardName);
-        newContainer.appendChild(card);
-        newContainer.appendChild(cardMenu);
-        newContainer.appendChild(add);
+        cardContainer.appendChild(card);
+        cardContainer.appendChild(cardMenu);
+        cardContainer.appendChild(add);
         add.appendChild(textAdd);
+
+        add.addEventListener("click",function() {
+            var cardTextArea = document.createElement("textarea");
+            var anadirBtn = document.createElement("button");
+            var anadirIcon = document.createElement("i");
+            var anadirBtnText = document.createTextNode("Añadir");
+
+            add.style.display = "none";
+
+            //atributos
+            cardTextArea.setAttribute("id","card-textarea");
+            anadirBtn.setAttribute("id","guardar-btn");
+            anadirIcon.classList.add("fa","fa-times");
+
+            cardContainer.appendChild(cardTextArea);
+            cardContainer.appendChild(anadirBtn);
+            anadirBtn.appendChild(anadirBtnText);
+            cardContainer.appendChild(anadirIcon);
+
+            anadirBtn.addEventListener("click",function() {
+                var cardContent = document.getElementById("card-textarea").value;
+                document.getElementById("card-textarea").value = "";
+
+                var cardText = document.createElement("label");
+                var cardTextValue = document.createTextNode(cardContent);
+                var cardTextIcon = document.createElement("i");
+
+                cardText.setAttribute("id","card-text");
+                cardTextIcon.classList.add("fa","fa-pencil")
+
+                cardContainer.insertBefore(cardText,cardTextArea);
+                cardText.appendChild(cardTextIcon);
+                cardText.appendChild(cardTextValue);
+
+            })
+            //función para cerrar con .fa-times
+            anadirIcon.addEventListener("click",function() {
+                cardContainer.style.display = "none";
+            })
+        })
     })
-
-    //1 div
-    //2 labels
-    // 1 textarea //div que encierre textarea con elementos de abajo para luego darles display none
-    //botón añadir
-    //llamar icono
-    //a
-
-    //funcion de guardar=elementos creados van dentro
