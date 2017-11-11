@@ -22,6 +22,12 @@ nav {
     padding: 5px;
 }
 
+/*los 3 divs dentro del primer nav*/
+#upper-nav div {
+    width: 30%;
+    vertical-align: middle;
+}
+
 /*nav superior*/
 #upper-nav {
     background: rgba(0,0,0,.15);
@@ -153,14 +159,16 @@ nav {
     padding: 0;
 }
 
-#bottom-menu li a, #bottom-menu li a:nth-child(2) {
+#bottom-menu li a {
     padding: 0 10px;
 }
 
+/*primer menu font es bolder*/
 #bottom-menu li:first-child {
     font-weight: 600;
 }
 
+/*size de los íconos*/
 #bottom-menu .fa {
     font-size: 15px;
 }
@@ -169,11 +177,12 @@ nav {
     margin-right: 3px;
 }
 
-#bottom-menu li a:hover, #bottom-menu li a:nth-child(2):hover {
+#bottom-menu li a:hover {
     background: rgba(0,0,0,.15);
     border-radius: 3px;
 }
 
+/*menu estilizado como link a la derecha*/
 #mostrar-menu {
     float: right;
     font-size: 15px;
@@ -194,12 +203,13 @@ nav {
     margin-right: 3px;
 }
 
-/******js elements********/
-/*añadir una lista*/
+/**********************js elements***********************/
+/*1: añadir una lista*/
 #container {
     display: inline-block;
 }
 
+/*texto dentro del contenedor*/
 #label {
     width: 250px;
     display: inline-block;
@@ -216,7 +226,8 @@ nav {
     background: rgba(0, 0, 0, 0.24);
 }
 
-/*second phase*/
+/*2: nuevo contenedor-formulario plomo con input + botones 
+mientras container anterior permanece oculto*/
 #new-container {
     width: 250px;
     margin: 20px 30px;
@@ -235,10 +246,12 @@ nav {
     outline: 2px solid #c1c1c2;
 }
 
+/*size del placeholder*/
 input::-webkit-input-placeholder {
     font-size: 18px;
 }
 
+/*botón guardar*/
 #guardar-btn {
     margin: 4px;
     padding: 8px 13px;
@@ -255,6 +268,7 @@ input::-webkit-input-placeholder {
     background: #23a835;
 }
 
+/*X para cerrar container*/
 .fa-times {
     font-size: 30px;
     vertical-align: middle;
@@ -268,7 +282,9 @@ input::-webkit-input-placeholder {
     color: #888888;
 }
 
-/*tercera fase, card title set, añadir tarjeta link*/
+/*3: elementos anteriores ocultos,
+input anterior transformado en label
+botones añadir y X para cerrar*/
 #card-container {
     float: left;
     width: 250px;
@@ -278,7 +294,7 @@ input::-webkit-input-placeholder {
     cursor: pointer;
 }
 
-
+/*label*/
 #card-name {
     font-weight: 600;
     display: inline-block;
@@ -287,6 +303,7 @@ input::-webkit-input-placeholder {
     cursor: pointer;
 }
 
+/*menu icon en label*/
 #card-container .fa-ellipsis-h {
     float: right;
     margin-top: 15px;
@@ -299,6 +316,7 @@ input::-webkit-input-placeholder {
     background: #cacaca;
 }
 
+/*añadir tarjeta link*/
 #add-card {
     padding: 5px 0 8px 16px;
     border-radius: 4px;
@@ -313,7 +331,8 @@ a {
     color: black;
 }
 
-/*fourth phase with textarea*/
+/*4: añadir tarjeta oculto,
+añadir botón + X para cerrar*/
 #card-textarea {
     display: block;
     width: 234px;
@@ -328,6 +347,7 @@ a {
     padding: 10px;
 }
 
+/*textarea convertido en label*/
 #card-text {
     display: block;
     margin: 0 6px 4px;
