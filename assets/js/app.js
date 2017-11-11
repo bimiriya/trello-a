@@ -85,6 +85,7 @@
         cardContainer.appendChild(add);
         add.appendChild(textAdd);
 
+        //función para crar textarea
         add.addEventListener("click",function() {
             var cardTextArea = document.createElement("textarea");
             var anadirBtn = document.createElement("button");
@@ -103,6 +104,15 @@
             anadirBtn.appendChild(anadirBtnText);
             cardContainer.appendChild(anadirIcon);
 
+           //función para agrandar textarea
+           var growingTextarea = document.getElementById("card-textarea");
+
+           growingTextarea.oninput = function() {
+               growingTextarea.style.height = Math.min(growingTextarea.scrollHeight) + "px";
+           };
+
+
+            //función para guardar tarjeta con añadir
             anadirBtn.addEventListener("click",function() {
                 var cardContent = document.getElementById("card-textarea").value;
                 document.getElementById("card-textarea").value = "";

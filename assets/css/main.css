@@ -13,9 +13,6 @@ header, header a {
     text-decoration: none;
 }
 
-header * {
-   /* border: 1px dashed yellow;*/
-}
 /*navs que corresponden a todo el header*/
 nav * {
     display: inline-block;
@@ -69,7 +66,7 @@ nav {
     background: rgb(96, 156, 207);
 }
 
-
+/*iconos a la izquierda*/
 #menu-left input {
     border: none;
     color: white;
@@ -100,12 +97,6 @@ nav {
 
 #logo a:hover {
     opacity: 0.7;
-}
-
-/*los 3 divs dentro del primer nav*/
-#upper-nav div {
-    width: 30%;
-    vertical-align: middle;
 }
 
 /*menu right*/
@@ -296,7 +287,7 @@ input::-webkit-input-placeholder {
     cursor: pointer;
 }
 
-.fa-ellipsis-h {
+#card-container .fa-ellipsis-h {
     float: right;
     margin-top: 15px;
     margin-right: 8px;
@@ -304,7 +295,7 @@ input::-webkit-input-placeholder {
     border-radius: 3px;
 }
 
-.fa-ellipsis-h:hover {
+#card-container .fa-ellipsis-h:hover {
     background: #cacaca;
 }
 
@@ -331,6 +322,10 @@ a {
     border: none;
     border-radius: 4px;
     font-size: 18px;
+    overflow: hidden;
+    box-sizing: border-box;
+    min-height: 70px;
+    padding: 10px;
 }
 
 #card-text {
