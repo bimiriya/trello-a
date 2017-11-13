@@ -204,168 +204,139 @@ nav {
 }
 
 /**********************js elements***********************/
-/*1: añadir una lista*/
-#container {
+#initial-container {
     display: inline-block;
-}
-
-/*texto dentro del contenedor*/
-#label {
+    padding: 5px;
+    border-radius: 5px;
     width: 250px;
-    display: inline-block;
-    margin: 20px 30px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+#input-lista {
     padding: 10px;
-    color: white;
-    background: rgba(0,0,0,.15);
-    border-radius: 4px;
-    cursor: text;
-    font-size: 18px;
-}
-
-#label:hover {
-    background: rgba(0, 0, 0, 0.24);
-}
-
-/*2: nuevo contenedor-formulario plomo con input + botones 
-mientras container anterior permanece oculto*/
-#new-container {
-    width: 250px;
-    margin: 20px 30px;
-    display: inline-block;
-    background: #e1e3e6;
-    border-radius: 4px;
-}
-
-#input {
-    display: block;
-    padding: 10px;
-    margin: 8px 0 0 6px;
-    width: 87%;
-    background: #cccccc;
+    border-radius: 5px;
+    outline: none;
     border: none;
-    outline: 2px solid #c1c1c2;
+    font-size: 20px;
+    background: rgba(0,0,0,.15);
+    width: 91.5%;
 }
 
-/*size del placeholder*/
-input::-webkit-input-placeholder {
-    font-size: 18px;
+#input-lista:active {
+    background: rgba(0, 0, 0, 0.274);
 }
 
-/*botón guardar*/
-#guardar-btn {
-    margin: 4px;
-    padding: 8px 13px;
-    background: #24ba3f;
+#input-lista::placeholder {
+    color: white;
+    padding: 10px;
+}
+
+#initial-container-clicked {
+    background: #e0e2e6;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+    width: 250px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+#input-lista-clicked {
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    background: rgba(0,0,0,.15);
+    display: block;
+    width: 91.5%;
+}
+
+#input-lista-clicked::placeholder {
+    padding: 10px;
+    color: grey;
+}
+
+.save-btn {
+    background: #00cb3a;
     border: none;
     outline: none;
     border-radius: 4px;
     color: white;
-    font-weight: 600;
+    padding: 10px 15px;
     font-size: 15px;
+    font-weight: 600;
+    margin: 5px 10px 0 0;
 }
 
-#guardar-btn:hover {
-    background: #23a835;
+.save-btn:hover {
+    background: #00b333;
 }
 
-/*X para cerrar container*/
 .fa-times {
-    font-size: 30px;
+    font-size: 25px;
     vertical-align: middle;
-    color: #a8a8a8;
-    margin-left: 5px;
-    margin-bottom: 4px;
-    cursor: pointer;
+    color: rgba(0, 0, 0, 0.329);
 }
 
 .fa-times:hover {
-    color: #888888;
+    color: rgba(0, 0, 0, 0.473);
 }
 
-/*3: elementos anteriores ocultos,
-input anterior transformado en label
-botones añadir y X para cerrar*/
-#card-container {
+#container {
     float: left;
     width: 250px;
-    margin: 20px 0 0 30px;
-    background: #e1e3e6;
+    background: #e0e2e6;
     border-radius: 4px;
-    cursor: pointer;
+    margin-top: 30px;
+    margin-left: 30px;
 }
 
-/*label*/
-#card-name {
-    font-weight: 600;
-    display: inline-block;
-    padding: 10px;
-    margin: 8px 6px 0;
-    cursor: pointer;
+#card-title {
+    padding: 15px;
+    font-size: 20px;
+    display: block;
 }
 
-/*menu icon en label*/
-#card-container .fa-ellipsis-h {
+#container .fa-ellipsis-h {
     float: right;
-    margin-top: 15px;
-    margin-right: 8px;
-    padding: 5px;
-    border-radius: 3px;
+    margin: 10px;
+    padding: 10px;
 }
 
-#card-container .fa-ellipsis-h:hover {
-    background: #cacaca;
-}
-
-/*añadir tarjeta link*/
-#add-card {
-    padding: 5px 0 8px 16px;
+#container .fa-ellipsis-h:hover {
+    background: rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+}
+
+#anadir-tarjeta {
+    text-decoration: underline;
+    padding: 10px;
     display: block;
+    cursor: pointer;
 }
 
-#add-card:hover {
-    background: #cacaca;
+#anadir-tarjeta:hover {
+    background: rgba(0, 0, 0, 0.15);
 }
 
-a {
-    color: black;
-}
-
-/*4: añadir tarjeta oculto,
-añadir botón + X para cerrar*/
-#card-textarea {
-    display: block;
-    width: 234px;
-    margin: 0 6px;
+#textarea {
+    margin-left: 8px;
     outline: none;
     border: none;
+    font-size: 20px;
     border-radius: 4px;
-    font-size: 18px;
     overflow: hidden;
+    resize: none;
     box-sizing: border-box;
-    min-height: 70px;
-    padding: 10px;
 }
 
-/*textarea convertido en label*/
-#card-text {
+#card {
     display: block;
-    margin: 0 6px 4px;
-    padding: 10px;
-    background: #f8fafb;
-    border-radius: 4px;
-    color: #5e5e5e;
-    font-size: 16px;
-}
-
-.fa-pencil {
-    float: right;
-    cursor: pointer;
+    background: #f3f3f3;
+    margin: 8px;
+    font-size: 20px;
     padding: 5px;
-    font-size: 18px;
-}
-
-.fa-pencil:hover {
-    background: #cacaca;
     border-radius: 4px;
 }
